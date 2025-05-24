@@ -1,7 +1,6 @@
 import tsParser from '@typescript-eslint/parser';
 import reactRecommended from 'eslint-plugin-react/configs/recommended.js';
 import jsxRuntime from 'eslint-plugin-react/configs/jsx-runtime.js';
-import unusedImports from 'eslint-plugin-unused-imports'
 import stylistic from '@stylistic/eslint-plugin';
 import importPlugin from 'eslint-plugin-import';
 
@@ -34,7 +33,6 @@ export default [
         plugins: {
             '@typescript-eslint': tsParser,
             '@stylistic': stylistic,
-            'unused-imports': unusedImports,
             import: importPlugin
         },
         rules: {
@@ -51,7 +49,6 @@ export default [
                 objectsInArrays: true,
                 arraysInArrays: true
             } ],
-            'unused-imports/no-unused-imports': 'warn',
             '@stylistic/object-curly-newline': [ 'error', {
                 ObjectExpression: { multiline: true },
                 ObjectPattern: { multiline: true },
