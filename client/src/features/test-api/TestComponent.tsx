@@ -6,7 +6,7 @@ export const TestComponent = () => {
   const [ loading, setLoading ] = useState( true );
 
   useEffect( () => {
-    axios.get( 'http://localhost:3000/api/test' )
+    axios.get( 'http://localhost:3000/data' )
       .then( response => {
         setData( response.data );
         setLoading( false );
