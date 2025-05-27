@@ -1,45 +1,20 @@
-$primary-color: #2c3e50;
-$secondary-color: #3498db;
-$text-color: #333;
-$background-color: #f5f6fa;
-
-$header-height: 60px;
-$container-width: 1200px;
-
-$box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-
-$font-main: 'Roboto', Arial, sans-serif;
-$font-size-base: 16px;
+@use 'variables' as *;
+@use 'fonts';
 
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-}
-
-@font-face {
-  font-family: 'Roboto';
-  src: url('../fonts/Roboto-Regular.ttf') format('ttf');
-  font-weight: 400;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Roboto';
-  src: url('../fonts/Roboto-SemiBold.ttf') format('ttf');
-  font-weight: 500;
-  font-display: swap;
-}
-
-html {
-  font-size: $font-size-base;
-  scroll-behavior: smooth;
 }
 
 body {
-  font-family: $font-main;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
   line-height: 1.6;
-  color: $text-color;
-  background: $background-color;
-  -webkit-font-smoothing: antialiased;
+}
+
+.error-message {
+  color: $error-color;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
 }

@@ -1,0 +1,34 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 24px;
+  align-items: flex-start;
+}
+
+.error {
+  color: #dc3545;
+  padding: 8px;
+  border: 1px solid currentColor;
+  border-radius: 4px;
+}
+
+.response {
+  background: #f8f9fa;
+  width: 100%;
+  padding: 16px;
+  border-radius: 8px;
+  border: 1px solid #dee2e6;
+  max-height: 600px;
+  overflow: auto;
+  white-space: pre-wrap;
+}
+
+.row {
+  display: flex;
+}
+
+.cell {
+  min-width: 180px;
+  border: 1px solid #9d9e9f;
+}

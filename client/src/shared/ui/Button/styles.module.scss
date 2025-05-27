@@ -1,0 +1,28 @@
+@use 'shared/assets/styles' as vars;
+
+.button {
+  all: unset;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  border: 2px solid vars.$primary-color;
+  border-radius: 8px;
+  font-weight: 600;
+  color: vars.$primary-color;
+  background: transparent;
+
+  &:hover {
+    background: rgba(vars.$primary-color, 0.1);
+  }
+
+  &:active {
+    background: rgba(vars.$primary-color, 0.2);
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}
