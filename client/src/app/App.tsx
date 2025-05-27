@@ -2,7 +2,7 @@ import 'shared/assets/styles/global.scss'
 
 import { AppProviders } from 'app/providers/app-providers.tsx'
 import { AppRouter } from 'app/providers/router.tsx'
-import {ErrorToast} from "widgets/error-toast/ui/ErrorToast.tsx"
+import { ErrorToast } from "widgets/ErrorToast/ui/ErrorToast.tsx"
 
 export const App = () => {
     return (

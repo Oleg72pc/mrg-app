@@ -1,4 +1,4 @@
-import type {RootState} from "app/store/store.ts"
+import { type RootState } from "app/store/store.ts"
 
 import { type MrgData } from './types'
 

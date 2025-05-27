@@ -10,7 +10,7 @@ export const uploadFile = async ( file: File ) => {
         return response.data
     } catch ( error ) {
         console.warn( error )
-        throw new Error( 'Ошибка при загрузке файла' )
+        throw new Error( 'Ошибка при отправке файла на сервер' )
     }
 }
 
@@ -20,6 +20,6 @@ export const fetchData = async () => {
         return response.data
     } catch ( error ) {
         console.warn( error )
-        throw new Error( 'Ошибка при загрузке данных' )
+        throw new Error( 'Ошибка при загрузке данных с сервера' )
     }
 }

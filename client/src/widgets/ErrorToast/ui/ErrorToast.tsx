@@ -23,7 +23,7 @@ export const ErrorToast = () => {
     return (
       <div className={styles.container}>
         <div className={styles.toast}>
-          <div className={styles.icon}>⚠️</div>
+          <div className={styles.icon}>❌</div>
           <div className={styles.message}>{error}</div>
         </div>
       </div>

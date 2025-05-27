@@ -1,5 +1,5 @@
 import { createSlice, type PayloadAction } from '@reduxjs/toolkit'
-import {fetchDataThunk, uploadFileThunk} from "entities/mrg/model/thunks.ts"
+import { fetchDataThunk, uploadFileThunk } from "entities/mrg/model/thunks.ts"
 
 import { type MrgData, type MrgState } from './types'
 

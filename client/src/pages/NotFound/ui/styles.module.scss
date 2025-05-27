@@ -1,0 +1,46 @@
+@use 'shared/assets/styles' as vars;
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #f8f9fa;
+  padding: 20px;
+  text-align: center;
+}
+
+.content {
+  max-width: 600px;
+}
+
+.title {
+  font-size: 8rem;
+  color: vars.$error-color;
+  font-weight: 600;
+}
+
+.subtitle {
+  font-size: 2rem;
+  color: vars.$error-color;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.button {
+  all: unset;
+  cursor: pointer;
+  padding: 12px 24px;
+  border: 2px solid vars.$primary-color;
+  border-radius: 8px;
+  font-weight: 600;
+  color: vars.$primary-color;
+
+  &:hover {
+    background: rgba(vars.$primary-color, 0.1);
+  }
+
+  &:active {
+    background: rgba(vars.$primary-color, 0.2);
+  }
+}

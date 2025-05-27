@@ -1,4 +1,7 @@
+import { type ColumnDef } from '@tanstack/react-table'
+
 export interface MrgData {
+    id: string;
     mrg: string;
     mg: string;
     km: number;
@@ -16,3 +19,13 @@ export interface MrgState {
         loadLevel?: number;
     };
 }
+
+export interface ColumnMeta {
+    isSubHeader?: boolean;
+    rowSpan?: number;
+    colSpan?: number;
+}
+
+export type MrgColumnDef<T> = ColumnDef<T> & {
+    meta?: ColumnMeta;
+};

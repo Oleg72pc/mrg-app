@@ -3,10 +3,7 @@
 .button {
   all: unset;
   cursor: pointer;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 12px 24px;
+  padding: 8px 12px;
   border: 2px solid vars.$primary-color;
   border-radius: 8px;
   font-weight: 600;
