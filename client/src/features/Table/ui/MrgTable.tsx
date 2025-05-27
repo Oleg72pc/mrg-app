@@ -40,20 +40,20 @@ const columns: Array<MrgColumnDef<MrgData>> = [
                     isSubHeader: true,
                     rowSpan: 1
                 },
-                cell: ( { getValue } ) => getValue() || '-'
+                cell: ( { getValue } ) =>  getValue() || '-'
             }
         ]
     },
     {
         header: 'Период',
         accessorKey: 'date',
-        meta: {rowSpan: 2 },
+        meta: {rowSpan: 2, fixSize: true },
         cell: ( { getValue } ) => transformDate( getValue() )
     },
     {
         header: 'Уровень загрузки',
         accessorKey: 'loadLevel',
-        meta: {rowSpan: 2 },
+        meta: {rowSpan: 2, fixSize: true },
         cell: ( { getValue } ) => (
           <ProgressBar value={Number( getValue() )} />
         ),
@@ -61,18 +61,18 @@ const columns: Array<MrgColumnDef<MrgData>> = [
     {
         header: 'Факт. среднесут. расход (qср.ф) млн.м3/сут',
         accessorKey: 'fact',
-        meta: {rowSpan: 2 },
-        cell: ( { getValue } ) => Number( getValue() ).toFixed( 1 ),
+        meta: {rowSpan: 2, fixSize: true },
+        cell: ( { getValue } ) => Number( getValue() ).toFixed( 1 )
     },
     {
         header: 'Технич. возм. проп. способн. (qср.р) млн. м3/сут',
         accessorKey: 'tvps',
-        meta: {rowSpan: 2 },
-        cell: ( { getValue } ) => Number( getValue() ).toFixed( 1 ),
+        meta: {rowSpan: 2, fixSize: true },
+        cell: ( { getValue } ) => Number( getValue() ).toFixed( 1 )
     },
     {
         header: 'График',
-        meta: {rowSpan: 2 },
+        meta: {rowSpan: 2, fixSize: true },
         cell: () => (
           <IconButton
             iconSrc={chartIcon}
@@ -121,7 +121,7 @@ export const MrgTable = ( { data, loading }: MrgTableProps ) => {
                               key={header.id}
                               colSpan={header.colSpan}
                               rowSpan={meta.rowSpan}
-                              className={styles.headerCell}
+                              className={!meta.fixSize ? styles.headerCell : styles.headerCellFix}
                               >
                               {flexRender(
                                       header.column.columnDef.header,

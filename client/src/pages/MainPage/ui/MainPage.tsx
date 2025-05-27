@@ -1,10 +1,10 @@
-import {useAppDispatch} from "app/store/store.ts"
-import { selectLoading, selectPaginatedData} from "entities/mrg/model/selectors.ts"
-import {setPage, setPageSize} from "entities/mrg/model/slice.ts"
+import { useAppDispatch } from "app/store/store.ts"
+import { selectLoading, selectPaginatedData } from "entities/mrg/model/selectors.ts"
+import { setPage, setPageSize } from "entities/mrg/model/slice.ts"
 import { FileInput } from "features/FileInput/ui/FileInput.tsx"
-import {Pagination} from "features/Pagination.tsx/ui/Pagination.tsx"
-import {MrgTable} from "features/Table/ui/MrgTable.tsx"
-import {useSelector} from "react-redux"
+import { Pagination } from "features/Pagination.tsx/ui/Pagination.tsx"
+import { MrgTable } from "features/Table/ui/MrgTable.tsx"
+import { useSelector } from "react-redux"
 
 import styles from './styles.module.scss'
 

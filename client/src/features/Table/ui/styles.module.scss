@@ -19,9 +19,15 @@
   text-align: center;
 }
 
+.headerCellFix {
+  @extend .headerCell;
+  max-width: 120px;
+}
+
 .cell {
   padding: 6px 16px;
   border: 2px solid vars.$table-border;
+  max-width: 200px;
   font-size: 14px;
   text-align: center;
 }

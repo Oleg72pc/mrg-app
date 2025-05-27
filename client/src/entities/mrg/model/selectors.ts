@@ -1,4 +1,4 @@
-import {createSelector} from "@reduxjs/toolkit"
+import { createSelector } from "@reduxjs/toolkit"
 import { type RootState } from "app/store/store.ts"
 
 // import { type MrgData } from './types'

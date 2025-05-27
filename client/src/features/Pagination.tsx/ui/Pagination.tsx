@@ -1,9 +1,8 @@
 import backIcon from 'shared/assets/icons/back.png'
 import forwardIcon from 'shared/assets/icons/forward.png'
-import {IconButton} from "shared/ui/IconButton/IconButton.tsx"
-import {Spinner} from "shared/ui/Spinner/Spinner.tsx"
+import { IconButton } from "shared/ui/IconButton/IconButton.tsx"
+import { Spinner } from "shared/ui/Spinner/Spinner.tsx"
 
-// import downIcon from 'shared/assets/icons/down.png'
 import styles from './styles.module.scss'
 
 interface PaginationProps {

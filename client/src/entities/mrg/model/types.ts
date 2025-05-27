@@ -30,9 +30,9 @@ export interface ColumnMeta {
     isSubHeader?: boolean;
     rowSpan?: number;
     colSpan?: number;
+    fixSize?: boolean;
 }
 
 export type MrgColumnDef<T> = ColumnDef<T> & {
     meta?: ColumnMeta;
 };
-

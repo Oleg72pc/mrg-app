@@ -16,14 +16,14 @@
 
 .title {
   font-size: 8rem;
-  color: vars.$error-color;
+  color: vars.$text-color;
   font-weight: 600;
 }
 
 .subtitle {
   font-size: 2rem;
-  color: vars.$error-color;
-  margin-bottom: 15px;
+  color: vars.$text-color-secondary;
+  margin-bottom: 40px;
   font-weight: 600;
 }
 
