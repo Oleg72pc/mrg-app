@@ -1,9 +1,10 @@
 import { flexRender, getCoreRowModel, useReactTable,} from '@tanstack/react-table'
-import {type MrgColumnDef, type MrgData} from 'entities/mrg/model/types'
-import {transformDate} from "shared/helpers/transformDateISO.ts"
-import {ChartButton} from "shared/ui/ChartButton/ChartButton.tsx"
-import {ProgressBar} from "shared/ui/ProgressBar/ProgressBar.tsx"
-import {Spinner} from "shared/ui/Spinner/Spinner.tsx"
+import { type MrgColumnDef, type MrgData } from 'entities/mrg/model/types'
+import chartIcon from 'shared/assets/icons/chart.png'
+import { transformDate } from "shared/helpers/transformDateISO.ts"
+import { IconButton } from "shared/ui/IconButton/IconButton.tsx"
+import { ProgressBar } from "shared/ui/ProgressBar/ProgressBar.tsx"
+import { Spinner } from "shared/ui/Spinner/Spinner.tsx"
 
 import styles from './styles.module.scss'
 
@@ -72,7 +73,14 @@ const columns: Array<MrgColumnDef<MrgData>> = [
     {
         header: 'График',
         meta: {rowSpan: 2 },
-        cell: () => <ChartButton />,
+        cell: () => (
+          <IconButton
+            iconSrc={chartIcon}
+            size="md"
+            aria-label="Показать график"
+            tooltip={"Показать график"}
+            />
+        ),
     },
 ]
 

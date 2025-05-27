@@ -11,10 +11,16 @@ export interface MrgData {
     tvps: number;
 }
 
+export interface MrgPagination {
+    currentPage: number;
+    pageSize: number
+}
+
 export interface MrgState {
     data: Array<MrgData>;
     loading: boolean;
     error: string | null;
+    pagination: MrgPagination;
     filters: {
         loadLevel?: number;
     };
@@ -29,3 +35,4 @@ export interface ColumnMeta {
 export type MrgColumnDef<T> = ColumnDef<T> & {
     meta?: ColumnMeta;
 };
+

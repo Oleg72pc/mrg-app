@@ -3,14 +3,15 @@
 .progressContainer {
   position: relative;
   height: 24px;
-  background: #f0f0f0;
-  border-radius: 4px;
+  max-width: 108px;
+  margin: 0 auto;
+  border: 1px solid vars.$table-border;
   overflow: hidden;
 }
 
 .progressBar {
   height: 100%;
-  background: vars.$primary-color;
+  background: vars.$level-load-l;
   transition: width 0.3s ease;
 }
 
@@ -19,7 +20,6 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: white;
-  font-size: 12px;
-  font-weight: 500;
+  font-size: 14px;
+  font-weight: 600;
 }

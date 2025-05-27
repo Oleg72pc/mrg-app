@@ -1,12 +1,16 @@
 import { createSlice, type PayloadAction } from '@reduxjs/toolkit'
 import { fetchDataThunk, uploadFileThunk } from "entities/mrg/model/thunks.ts"
 
-import { type MrgData, type MrgState } from './types'
+import {type MrgData, type MrgState} from './types'
 
 const initialState: MrgState = {
     data: [],
     loading: false,
     error: null,
+    pagination: {
+        currentPage: 1,
+        pageSize: 10
+    },
     filters: {},
 }
 
@@ -17,12 +21,19 @@ const mrgSlice = createSlice( {
         setData: ( state, action: PayloadAction<Array<MrgData>> ) => {
             state.data = action.payload
         },
+        setPage: ( state, action: PayloadAction<number> ) => {
+            state.pagination.currentPage = action.payload
+        },
+        setPageSize: ( state, action: PayloadAction<number> ) => {
+            state.pagination.pageSize = action.payload
+            state.pagination.currentPage = 1
+        },
         setFilters: ( state, action: PayloadAction<MrgState['filters']> ) => {
             state.filters = action.payload
         },
         resetError: ( state ) => {
             state.error = null
-        },
+        }
     },
     extraReducers: ( builder ) => {
         builder.addCase( fetchDataThunk.pending, ( state ) => {
@@ -53,5 +64,11 @@ const mrgSlice = createSlice( {
     },
 } )
 
-export const { setData, setFilters, resetError } = mrgSlice.actions
+export const {
+    setData,
+    setPage,
+    setPageSize,
+    setFilters,
+    resetError
+} = mrgSlice.actions
 export default mrgSlice.reducer

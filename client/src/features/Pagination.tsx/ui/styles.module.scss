@@ -1,0 +1,63 @@
+@use 'shared/assets/styles' as vars;
+
+.container {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 60px;
+  align-items: center;
+  padding: 16px;
+  background: #f8f9fa;
+  border-top: 1px solid #dee2e6;
+  color: vars.$text-color-secondary;
+  font-size: 16px;
+}
+
+.title{
+  margin-right: 10px;
+}
+
+.pageSize {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  padding: 8px 24px 8px 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  background-color: white;
+  color: vars.$text-color-secondary;
+  cursor: pointer;
+  margin-right: 10px;
+
+  background-image: url("../../../shared/assets/icons/down.png");
+  background-repeat: no-repeat;
+  background-position: right 8px center;
+  background-size: 16px;
+
+  &:focus {
+    outline: none;
+    border-color: vars.$primary-color;
+    box-shadow: 0 0 0 2px rgba(vars.$primary-color, 0.1);
+  }
+
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    background-color: vars.$table-border;
+  }
+
+  &::-ms-expand {
+    display: none;
+  }
+}
+
+.pageInfo {
+  margin-right: 10px;
+}
+
+.controls {
+   display: flex;
+   align-items: center;
+   gap: 16px;
+ }

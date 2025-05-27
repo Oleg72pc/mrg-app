@@ -1,0 +1,50 @@
+@use 'shared/assets/styles' as vars;
+
+.button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  padding: 0;
+  transition: all 0.2s ease;
+  border-radius: 8px;
+
+  &:hover:not(.disabled) {
+    background: rgba(vars.$primary-color , 0.2);
+  }
+
+  &:active:not(.disabled) {
+    background: rgba(vars.$primary-color, 0.4);
+  }
+
+  &:focus-visible {
+    outline: 2px solid vars.$primary-color;
+    outline-offset: 2px;
+  }
+
+  &.disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+
+  &.size-sm {
+    width: 12px;
+    height: 12px;
+  }
+
+  &.size-md {
+    width: 24px;
+    height: 24px;
+  }
+
+  &.size-lg {
+    width: 48px;
+    height: 48px;
+  }
+}
+
+.icon {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  pointer-events: none;
+}
