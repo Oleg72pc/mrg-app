@@ -115,7 +115,7 @@ export class ExcelParserService {
             mrg: String(row.mrg || ''),
             mg: String(row.mg || ''),
             km: this.parseNumber(row.km),
-            date: this.parseDate(row.date),
+            date: this.parseDate(row.date || ''),
             loadLevel: this.parseNumber(row.loadLevel, 100),
             fact: this.parseNumber(row.fact),
             tvps: this.parseNumber(row.tvps),
@@ -143,26 +143,10 @@ export class ExcelParserService {
     return Number(num.toFixed(2));
   }
 
-  private parseDate(value: any): string {
-    if (!(value instanceof Date)) {
-      throw new Error(`Некорректный формат даты: ${value}`);
-    }
+  private parseDate(value: string): string {
+    const date = new Date(value);
+    date.setTime(date.getTime() + 6 * 3600 * 1000);
 
-    const monthNames = [
-      'январь',
-      'февраль',
-      'март',
-      'апрель',
-      'май',
-      'июнь',
-      'июль',
-      'август',
-      'сентябрь',
-      'октябрь',
-      'ноябрь',
-      'декабрь',
-    ];
-
-    return `${monthNames[value.getMonth()]} ${value.getFullYear()}`;
+    return date.toISOString();
   }
 }
