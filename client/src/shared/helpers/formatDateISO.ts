@@ -1,4 +1,4 @@
-export const transformDate = ( dateIso: unknown ) => {
+export const formatDateISO = ( dateIso: unknown ) => {
     if ( typeof dateIso !== 'string' ) return
 
     const date = new Date( dateIso )

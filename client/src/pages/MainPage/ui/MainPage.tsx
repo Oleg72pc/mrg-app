@@ -1,17 +1,26 @@
 import { useAppDispatch } from "app/store/store.ts"
+import {selectChartData, selectIsOpen, selectSelectedMrg} from "entities/chart/model/selectors.ts"
+import {closeChart} from "entities/chart/model/slice.ts"
 import { selectLoading, selectPaginatedData } from "entities/mrg/model/selectors.ts"
 import { setPage, setPageSize } from "entities/mrg/model/slice.ts"
+import {Chart} from "features/Chart/ui/Chart.tsx"
 import { FileInput } from "features/FileInput/ui/FileInput.tsx"
 import { Pagination } from "features/Pagination.tsx/ui/Pagination.tsx"
-import { MrgTable } from "features/Table/ui/MrgTable.tsx"
+import { Table } from "features/Table/ui/Table.tsx"
 import { useSelector } from "react-redux"
+import { PageLayout } from "shared/layouts/PageLayout/PageLayout.tsx"
+import { Modal } from "widgets/Modal/ui/Modal.tsx"
 
-import styles from './styles.module.scss'
 
 export const MainPage = () => {
     const dispatch = useAppDispatch()
+
     const { data, ...pagination } = useSelector( selectPaginatedData )
     const loading = useSelector( selectLoading )
+
+    const isOpen = useSelector( selectIsOpen )
+    const selectedMgr = useSelector( selectSelectedMrg )
+    const chartData = useSelector( selectChartData )
 
     const handlePageChange = ( page: number ) => {
         dispatch( setPage( page ) )
@@ -20,11 +29,11 @@ export const MainPage = () => {
     const handlePageSizeChange = ( size: number ) => {
         dispatch( setPageSize( size ) )
     }
-    
+
     return (
-      <div className={styles.container}>
+      <PageLayout>
         <FileInput />
-        <MrgTable
+        <Table
           data={data}
           loading={loading}
           />
@@ -36,6 +45,15 @@ export const MainPage = () => {
           onPageSizeChange={handlePageSizeChange}
           loading={loading}
           />
-      </div>
+        <Modal
+          isOpen={isOpen}
+          onClose={() => dispatch( closeChart() )}
+          >
+          <Chart
+            data={chartData}
+            selectedMgr={selectedMgr}
+              />
+        </Modal>
+      </PageLayout>
     )
 }
