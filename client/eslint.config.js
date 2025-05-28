@@ -41,6 +41,9 @@ export default tseslint.config(
       ],
         "semi": ["error", "never"],
         "no-extra-semi": "error",
+        'unused-imports/no-unused-imports': 'warn',
+        'simple-import-sort/imports': 'error',
+        'simple-import-sort/exports': 'error',
 
         "react/jsx-uses-react": "error",
         "react/jsx-uses-vars": "error",
@@ -48,7 +51,6 @@ export default tseslint.config(
         "react/jsx-indent": ["error", 2],
         "react/jsx-indent-props": ["error", 2],
         "react/jsx-closing-tag-location": "error",
-        "react/jsx-curly-spacing": ["error", "never"],
         "react/jsx-equals-spacing": ["error", "never"],
         "react/jsx-key": "error",
         "react/jsx-no-target-blank": "warn",
@@ -57,6 +59,11 @@ export default tseslint.config(
         "react/prop-types": "warn",
         "react/jsx-props-no-spreading": "off",
         "react/self-closing-comp": "error",
+        'react/jsx-curly-spacing': ['error', {
+            when: 'never',
+            children: true,
+            spacing: { objectLiterals: 'never' }
+        }],
 
         '@typescript-eslint/no-unused-vars': [
             'warn',
@@ -76,11 +83,13 @@ export default tseslint.config(
         '@typescript-eslint/array-type': [ 'error', { default: 'generic' } ],
         '@typescript-eslint/no-unsafe-assignment': 'off',
         '@typescript-eslint/restrict-template-expressions': 'off',
+        '@typescript-eslint/comma-dangle': 'off',
 
-        'unused-imports/no-unused-imports': 'warn',
-        'simple-import-sort/imports': 'error',
-        'simple-import-sort/exports': 'error',
-
+        '@stylistic/comma-dangle': ['error', 'never'],
+        '@stylistic/comma-spacing': ['error', { before: false, after: true }],
+        '@stylistic/object-curly-spacing': ['error', 'always'],
+        '@stylistic/type-generic-spacing': 'error',
+        '@stylistic/type-annotation-spacing': 'error',
         '@stylistic/brace-style': [ 'error', '1tbs', { allowSingleLine: true } ],
         '@stylistic/space-in-parens': [ 'warn', 'always' ],
         '@stylistic/array-bracket-spacing': [ 'warn', 'always', {
@@ -92,10 +101,13 @@ export default tseslint.config(
             ignoreUrls: true,
             ignoreComments: true
         } ],
-        '@stylistic/jsx-curly-spacing': [ 'error', {
+        '@stylistic/jsx-curly-spacing': ['error', {
             when: 'never',
-            children: true
-        } ],
+            children: true,
+            spacing: {
+                objectLiterals: 'never'
+            }
+        }],
         '@stylistic/func-call-spacing': 'error',
         '@stylistic/operator-linebreak': [ 'error', 'after' ],
         '@stylistic/object-curly-newline': [ 'error', {

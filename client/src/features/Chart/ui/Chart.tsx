@@ -6,9 +6,9 @@ import {
     LineElement,
     PointElement,
     Title,
-    Tooltip,
+    Tooltip
 } from 'chart.js'
-import type {ChartProps} from "entities/chart/model/types.ts"
+import type { ChartProps } from "entities/chart/model/types.ts"
 import { Line } from 'react-chartjs-2'
 import { formatDate } from "shared/helpers/formatDate.ts"
 
@@ -37,7 +37,7 @@ export const Chart = ( props: ChartProps ) => {
                 borderColor: '#007DF0',
                 backgroundColor: 'rgba(0, 125, 250, 0.2)',
                 borderWidth: 3,
-                pointRadius: 4,
+                pointRadius: 4
 
             },
             {
@@ -46,7 +46,7 @@ export const Chart = ( props: ChartProps ) => {
                 borderColor: '#F04F47',
                 backgroundColor: 'rgba(240, 79, 71, 0.2)',
                 borderWidth: 3,
-                pointRadius: 4,
+                pointRadius: 4
 
             }
         ]
@@ -54,7 +54,11 @@ export const Chart = ( props: ChartProps ) => {
 
     const options = {
         responsive: true,
-        maintainAspectRatio: false,
+        interaction: {
+            mode: 'index',
+            intersect: false
+        },
+        stacked: false,
         plugins: {
             legend: {
                 position: 'bottom' as const,
@@ -62,8 +66,7 @@ export const Chart = ( props: ChartProps ) => {
                     font: {
                         family: 'Roboto',
                         size: 12
-                    },
-                    // padding: 20
+                    }
                 }
             },
             title: {
@@ -73,8 +76,7 @@ export const Chart = ( props: ChartProps ) => {
                     family: 'Roboto',
                     size: 16,
                     weight: 'bold'
-                },
-                // padding: 20
+                }
             },
             tooltip: {
                 bodyFont: {
@@ -88,8 +90,8 @@ export const Chart = ( props: ChartProps ) => {
             }
         },
         scales: {
-            x: {grid: {display: false},},
-            y: {grid: {display: false},}
+            x: { grid: { display: false } },
+            y: { grid: { display: false } }
         }
     }
     

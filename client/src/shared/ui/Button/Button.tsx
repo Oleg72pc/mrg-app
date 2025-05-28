@@ -1,4 +1,4 @@
-import {type ButtonHTMLAttributes, type ReactNode} from "react"
+import { type ButtonHTMLAttributes, type ReactNode } from "react"
 
 import styles from './styles.module.scss'
 

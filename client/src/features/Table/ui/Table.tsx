@@ -30,7 +30,7 @@ export const Table = ( { data, loading }: MrgTableProps ) => {
             selectedParams: {
                 mrg: rowData.mrg,
                 mg: rowData.mg,
-                km: rowData.km,
+                km: rowData.km
             },
             data: filteredData.map( item => ( {
                 date: item.date,

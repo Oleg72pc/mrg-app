@@ -1,7 +1,7 @@
 import { selectError } from 'entities/mrg/model/selectors'
 import { resetError } from 'entities/mrg/model/slice'
 import { useEffect } from 'react'
-import { useDispatch,useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 
 import styles from './styles.module.scss'
 

@@ -7,9 +7,9 @@ const initialState: ChartState = {
     selectedParams: {
         mrg: null,
         mg: null,
-        km: null,
+        km: null
     },
-    chartData: [],
+    chartData: []
 }
 
 const chartSlice = createSlice( {
@@ -23,8 +23,8 @@ const chartSlice = createSlice( {
         },
         closeChart: () => {
             return initialState
-        },
-    },
+        }
+    }
 } )
 
 export const { openChart, closeChart } = chartSlice.actions

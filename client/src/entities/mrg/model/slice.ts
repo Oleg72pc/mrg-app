@@ -1,7 +1,7 @@
 import { createSlice, type PayloadAction } from '@reduxjs/toolkit'
 import { fetchDataThunk, uploadFileThunk } from "entities/mrg/model/thunks.ts"
 
-import { type MrgState} from './types'
+import { type MrgState } from './types'
 
 const initialState: MrgState = {
     data: [],
@@ -54,7 +54,7 @@ const mrgSlice = createSlice( {
             state.loading = false
             state.error = action.payload as string
         } )
-    },
+    }
 } )
 
 export const {

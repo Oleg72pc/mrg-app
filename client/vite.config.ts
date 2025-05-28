@@ -13,7 +13,7 @@ export default defineConfig( {
       'features': resolve( __dirname, './src/features' ),
       'widgets': resolve( __dirname, './src/widgets' ),
       'pages': resolve( __dirname, './src/pages' ),
-      'shared': resolve( __dirname, './src/shared' ),
+      'shared': resolve( __dirname, './src/shared' )
     }
   }
 } )
