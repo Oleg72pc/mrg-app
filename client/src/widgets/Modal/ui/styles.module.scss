@@ -13,6 +13,13 @@
   z-index: 1000;
 }
 
+.title {
+  color: vars.$text-color-secondary;
+  font-weight: 600;
+  font-size: 19px;
+  padding-left: 4px;
+}
+
 .content {
   background: white;
   padding: 32px;

@@ -6,9 +6,10 @@ interface ModalProps {
     isOpen: boolean;
     onClose: () => void;
     children: ReactNode;
+    title?: string;
 }
 
-export const Modal = ( { isOpen, onClose, children }: ModalProps ) => {
+export const Modal = ( { isOpen, onClose, children, title }: ModalProps ) => {
     useEffect( () => {
         const handleEscape = ( e: KeyboardEvent ) => {
             if ( e.key === 'Escape' ) onClose()
@@ -23,6 +24,7 @@ export const Modal = ( { isOpen, onClose, children }: ModalProps ) => {
     return (
       <div className={styles.overlay} onClick={onClose}>
         <div className={styles.content} onClick={( e ) => e.stopPropagation()}>
+          <div className={styles.title}>{title}</div>
           {children}
         </div>
       </div>

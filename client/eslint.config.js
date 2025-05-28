@@ -77,7 +77,6 @@ export default tseslint.config(
                 ignoreRestSiblings: true
             }
         ],
-        '@typescript-eslint/no-explicit-any': 'warn',
         '@typescript-eslint/no-empty-object-type': 'warn',
         '@typescript-eslint/ban-ts-comment': 'warn',
         '@typescript-eslint/array-type': [ 'error', { default: 'generic' } ],

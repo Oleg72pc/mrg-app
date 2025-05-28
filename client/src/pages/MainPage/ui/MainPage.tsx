@@ -47,6 +47,7 @@ export const MainPage = () => {
           />
         <Modal
           isOpen={isOpen}
+          title={'Загрузка МРГ'}
           onClose={() => dispatch( closeChart() )}
           >
           <Chart
