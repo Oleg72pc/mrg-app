@@ -1,7 +1,7 @@
 # Client
 
 ## Основной стек
-- **React** v19
+- **React**
 - **TypeScript**
 - **Vite**
 - **Redux Toolkit**
