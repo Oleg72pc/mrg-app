@@ -13,3 +13,7 @@ docker compose build
 ```
 docker compose up
 ```
+
+- Клиент: `http://localhost/`
+- Сервер: `http://localhost:3000`
+- Swagger UI: `http://localhost:3000/api-docs`
