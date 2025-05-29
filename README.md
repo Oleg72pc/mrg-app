@@ -2,8 +2,14 @@
 Система для загрузки и визуализации данных магистральных распределительных газопроводов.
 
 ## Основной стек
-- **Frontend**: React, TypeScript, Vite, Redux Toolkit, React Router, Axios, TanStack React Table, Chart.js, Sass modules
-- **Backend**: NestJS, TypeScript
+- **Frontend**: React, TypeScript, Redux Toolkit, Axios, TanStack React Table, Chart.js, Sass modules
+- **Backend**: NestJS, TypeScript, Swagger
 - **Инфраструктура**: Docker, Docker Compose
 
-## Установка
+## Запуск 
+```
+docker compose build
+```
+```
+docker compose up
+```
