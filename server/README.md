@@ -6,8 +6,6 @@
 - **Express**
 - **Swagger**
 
-## Запуск локально 
-
 ### Установка зависимостей
 ```bash
 npm install
@@ -18,6 +16,7 @@ npm install
 npm run start:dev
 ```
 Сервер будет доступен по адресу: `http://localhost:3000`
+Swagger UI: `http://localhost:3000/api-docs`
 
 ### Сборка проекта
 ```bash
