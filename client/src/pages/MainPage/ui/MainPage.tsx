@@ -5,7 +5,7 @@ import { selectLoading, selectPaginatedData } from "entities/mrg/model/selectors
 import { setPage, setPageSize } from "entities/mrg/model/slice.ts"
 import { Chart } from "features/Chart/ui/Chart.tsx"
 import { FileInput } from "features/FileInput/ui/FileInput.tsx"
-import { Pagination } from "features/Pagination.tsx/ui/Pagination.tsx"
+import { Pagination } from "features/Pagination/ui/Pagination.tsx"
 import { Table } from "features/Table/ui/Table.tsx"
 import { useSelector } from "react-redux"
 import { PageLayout } from "shared/layouts/PageLayout/PageLayout.tsx"
